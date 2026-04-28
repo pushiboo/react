@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>My Website</h1>
+
+  <div id="banner">
+
+  </div>
+
+  <footer>
+    <p>footer</p>
+  </footer>
+  <script type="text/babel">
+    const Banner = () => {
+      const title = 'Welcome to my Webpage'
+      const subtitle = 'this is a website to learn react'
+      const address = 'https://andreasplichta.de'
+      return (
+        <div className="banner">
+          <h2>{title.toLocaleUpperCase()}</h2>
+          <p>{subtitle}</p>
+          <p>Today's date is: {new Date().toDateString()}</p>
+          <p>Random number: {Math.random() * 100 }</p>
+          <a href={address}>Visit your own webpage</a>
+        </div>
+      )
+    }
+    ReactDOM.render(<Banner />, document.getElementById('banner'))
+  </script>
+</body>
+</html>

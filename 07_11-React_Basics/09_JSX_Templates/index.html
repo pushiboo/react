@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>My Website</h1>
+
+  <div id="banner">
+
+  </div>
+
+  <footer>
+    <p>footer</p>
+  </footer>
+
+  <!-- Your custom script here -->
+  <!-- this create a jsx template -->
+  <script type="text/babel">
+    const Banner = () => {
+      return (
+        // 1 The first difference 
+        // do not use class in JSX!
+        // <div class="banner">
+        // You have to use className in JSX!
+        <div className="banner">
+          <p>banner</p>
+        </div>
+        // 2 The second difference is, that there is just one parent element allowed!
+        // That means you can not have a seond parent element, just one root element is allowed.
+        // <div></div>
+        // the third difference is you have to make comments in javascript style and not like
+        // in html style <!-- -->
+      )
+    }
+    // render the component to the DOM
+    ReactDOM.render(<Banner />, document.getElementById('banner'))
+  </script>
+</body>
+</html>
